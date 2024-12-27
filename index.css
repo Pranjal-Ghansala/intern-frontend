@@ -1,17 +1,24 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Include borders and padding in element width/height */
 }
 
  
  
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
+
 #top{
     display: flex
     ;
         justify-content: space-around;
         background-color: #c94242;
         color: white;
-        margin-left: -124px;
+      
         padding: 12px 0px 12px 0px;
 }
 #top2{
@@ -25,14 +32,28 @@
     width: 100vw;
     background-image: url(/images/banner-1.jpg);
     background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+
     
+
 }
 #bg2{
     height: 100vh;
     width: 100vw;
     background-image: url(/images/WhatsApp\ Image\ 2024-12-27\ at\ 13.08.24_6a8da22f.jpg);
     background-size: cover;
+    margin: 0;
+    padding: 0;
     
+}
+
+ 
+#bg4{
+    background-image: url(/images/MERITORIOUS-AWARD.jpg);
+    background-size: cover;
+    display: none;
 }
 
 nav {
@@ -74,3 +95,65 @@ button{
     margin: 25px 17px;
   
 }
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+    
+
+    nav button {
+        margin-top: 10px;
+    }
+
+    #hero {
+   
+    }
+
+    #bg,
+    #bg2 {
+        height: 50vh; /* Reduce hero height on smaller screens */
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #top2{
+        display: none;
+    }
+    nav{
+     
+    }
+    nav img {
+        height: 40px; /* Smaller logo for tiny screens */
+    }
+
+    nav ul li {
+        font-size: 0.9rem; /* Adjust font size for small screens */
+        display: none;
+    }
+
+    nav button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    #bg,
+    #bg2 {
+      
+   height: 20vh;
+     
+       
+    }
+    #bg3,
+    #bg4 {
+        height: 20vh;
+        display: block;
+        background-size: contain;
+        background-repeat: space;
+     
+       
+    }
+}
+
+ 
